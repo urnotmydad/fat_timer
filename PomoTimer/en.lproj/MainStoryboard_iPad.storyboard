@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="FATMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                                <items>
+                                    <navigationItem title="Title" id="14">
+                                        <barButtonItem key="rightBarButtonItem" title="Info" id="15">
+                                            <connections>
+                                                <action selector="togglePopover:" destination="2" id="23"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SjV-5I-rSy">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="6We-8a-vIF"/>
+                                    <constraint firstAttribute="height" constant="98" id="peT-nz-3PA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-q1-2Nr">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="xVg-Fr-UBI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Pause">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimerButton:" destination="2" eventType="touchUpInside" id="yaQ-hb-SMn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBe-84-XAg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="E46-fc-BVp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimerButton:" destination="2" eventType="touchUpInside" id="vaa-DE-55u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu7-BO-8Ho">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="7LH-GN-Qj2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButton:" destination="2" eventType="touchUpInside" id="X26-t2-AD6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9x-wG-409">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Short Break">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shortBreakButton:" destination="2" eventType="touchUpInside" id="AtG-uP-uFc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXD-ZS-Lpp">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Long Break">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="longBreakButton:" destination="2" eventType="touchUpInside" id="UtN-dk-4k7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="13" firstAttribute="leading" secondItem="8" secondAttribute="leading" type="default" id="2QB-Bm-yyx"/>
+                            <constraint firstAttribute="bottom" secondItem="nu7-BO-8Ho" secondAttribute="bottom" constant="397" id="3H6-5y-5q1"/>
+                            <constraint firstItem="SBe-84-XAg" firstAttribute="trailing" secondItem="s9x-wG-409" secondAttribute="trailing" type="default" id="HUL-ui-bm0"/>
+                            <constraint firstItem="13" firstAttribute="top" secondItem="8" secondAttribute="top" type="default" id="Ite-tp-1De"/>
+                            <constraint firstItem="SjV-5I-rSy" firstAttribute="centerX" secondItem="13" secondAttribute="centerX" type="default" id="L4F-S2-X9s"/>
+                            <constraint firstItem="SBe-84-XAg" firstAttribute="top" secondItem="8" secondAttribute="top" constant="445" id="NgT-fO-vPo"/>
+                            <constraint firstItem="SjV-5I-rSy" firstAttribute="centerX" secondItem="nu7-BO-8Ho" secondAttribute="centerX" type="default" id="ZF0-EP-Jy7"/>
+                            <constraint firstItem="VXD-ZS-Lpp" firstAttribute="trailing" secondItem="IXb-q1-2Nr" secondAttribute="trailing" type="default" id="bTz-3n-b1a"/>
+                            <constraint firstAttribute="trailing" secondItem="IXb-q1-2Nr" secondAttribute="trailing" constant="259" id="c6x-TN-RJD"/>
+                            <constraint firstItem="SjV-5I-rSy" firstAttribute="top" secondItem="8" secondAttribute="top" constant="253" id="ePY-Yw-twy"/>
+                            <constraint firstItem="VXD-ZS-Lpp" firstAttribute="baseline" secondItem="s9x-wG-409" secondAttribute="baseline" type="default" id="j5Z-Wy-zNx"/>
+                            <constraint firstItem="SBe-84-XAg" firstAttribute="leading" secondItem="s9x-wG-409" secondAttribute="leading" type="default" id="kyA-yP-UTs"/>
+                            <constraint firstItem="SBe-84-XAg" firstAttribute="baseline" secondItem="IXb-q1-2Nr" secondAttribute="baseline" type="default" id="lxY-Qe-ax6"/>
+                            <constraint firstItem="VXD-ZS-Lpp" firstAttribute="leading" secondItem="IXb-q1-2Nr" secondAttribute="leading" type="default" id="m3Q-68-AdV"/>
+                            <constraint firstItem="SBe-84-XAg" firstAttribute="leading" secondItem="8" secondAttribute="leading" constant="260" id="q3B-zs-lnv"/>
+                            <constraint firstItem="13" firstAttribute="trailing" secondItem="8" secondAttribute="trailing" type="default" id="rxf-8n-QJS"/>
+                            <constraint firstAttribute="bottom" secondItem="s9x-wG-409" secondAttribute="bottom" constant="458" id="yVZ-dm-kfz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="SjV-5I-rSy" id="gsW-to-mhD"/>
+                        <segue destination="5" kind="popover" identifier="showAlternate" popoverAnchorBarButtonItem="15" id="22">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286" y="15"/>
+        </scene>
+        <!--Flipside View Controller-->
+        <scene sceneID="7">
+            <objects>
+                <viewController id="5" customClass="FATFlipsideViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9">
+                        <rect key="frame" x="0.0" y="20" width="320" height="832"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                                <items>
+                                    <navigationItem title="Title" id="18">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="19">
+                                            <connections>
+                                                <action selector="done:" destination="5" id="21"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="17" firstAttribute="top" secondItem="9" secondAttribute="top" type="default" id="Lrv-p2-UP8"/>
+                            <constraint firstItem="17" firstAttribute="trailing" secondItem="9" secondAttribute="trailing" type="default" id="PRu-8s-dhg"/>
+                            <constraint firstItem="17" firstAttribute="leading" secondItem="9" secondAttribute="leading" type="default" id="vQR-Rw-aMI"/>
+                        </constraints>
+                    </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="101"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FATFlipsideViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FATFlipsideViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="FATMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FATMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="resetButton:"/>
+                <relationship kind="action" name="segControllPress:"/>
+                <relationship kind="action" name="startTimerButton:"/>
+                <relationship kind="action" name="stopTimerButton:"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="segControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

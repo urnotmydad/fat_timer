@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="FATMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="11"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z5j-1m-FS1">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="441-DO-ZIe">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="112" id="zdB-O3-h1L"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Pause">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopTimerButton:" destination="2" eventType="touchUpInside" id="HBF-TN-C8t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5S-cl-b5K">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="112" id="866-rx-9sl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startTimerButton:" destination="2" eventType="touchUpInside" id="5MZ-dw-xZQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ki-pV-aJX">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="242" id="7Lw-gw-F1o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButton:" destination="2" eventType="touchUpInside" id="Xru-yT-Scb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="441-DO-ZIe" firstAttribute="baseline" secondItem="k5S-cl-b5K" secondAttribute="baseline" type="default" id="9eY-5I-Sma"/>
+                                    <constraint firstItem="k5S-cl-b5K" firstAttribute="top" secondItem="z5j-1m-FS1" secondAttribute="top" constant="-1" id="Eyd-VZ-LRZ"/>
+                                    <constraint firstItem="k5S-cl-b5K" firstAttribute="leading" secondItem="4Ki-pV-aJX" secondAttribute="leading" type="default" id="Hgn-Gf-gAz"/>
+                                    <constraint firstItem="4Ki-pV-aJX" firstAttribute="top" secondItem="z5j-1m-FS1" secondAttribute="top" constant="63" id="MM5-HU-2ZS"/>
+                                    <constraint firstItem="441-DO-ZIe" firstAttribute="trailing" secondItem="4Ki-pV-aJX" secondAttribute="trailing" type="default" id="kuS-fk-e2H"/>
+                                    <constraint firstItem="4Ki-pV-aJX" firstAttribute="centerX" secondItem="z5j-1m-FS1" secondAttribute="centerX" type="default" id="ne1-zc-6nl"/>
+                                    <constraint firstItem="k5S-cl-b5K" firstAttribute="top" secondItem="441-DO-ZIe" secondAttribute="top" type="default" id="qaG-mm-R3z"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="oJM-Np-Aj6">
+                                <items>
+                                    <navigationItem title="Work Block" id="JsW-zl-vwk"/>
+                                </items>
+                            </navigationBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sce-gJ-gXb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="Nna-UI-2wJ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Work"/>
+                                    <segment title="Short"/>
+                                    <segment title="Long"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segControllPress:" destination="2" eventType="valueChanged" id="vBv-LQ-93O"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSx-xl-g4l">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="25:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FvD-xG-O19">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="D1V-g4-7UD"/>
+                                            <constraint firstAttribute="width" constant="241" id="gyV-Zs-TWV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FvD-xG-O19" firstAttribute="top" secondItem="sSx-xl-g4l" secondAttribute="top" constant="31" id="PJD-Zt-UBQ"/>
+                                    <constraint firstItem="FvD-xG-O19" firstAttribute="centerX" secondItem="sSx-xl-g4l" secondAttribute="centerX" type="default" id="vrO-bF-hq0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oJM-Np-Aj6" firstAttribute="centerX" secondItem="sSx-xl-g4l" secondAttribute="centerX" type="default" id="5vq-Ce-BdE"/>
+                            <constraint firstItem="10" firstAttribute="top" secondItem="z5j-1m-FS1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6I7-mi-QWg"/>
+                            <constraint firstAttribute="trailing" secondItem="Sce-gJ-gXb" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ALE-s1-84U"/>
+                            <constraint firstItem="sSx-xl-g4l" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="23" id="BXT-YQ-9J0"/>
+                            <constraint firstItem="z5j-1m-FS1" firstAttribute="trailing" secondItem="sSx-xl-g4l" secondAttribute="trailing" type="default" id="CxL-cD-JA2"/>
+                            <constraint firstItem="z5j-1m-FS1" firstAttribute="leading" secondItem="sSx-xl-g4l" secondAttribute="leading" type="default" id="HOJ-f4-cL7"/>
+                            <constraint firstItem="oJM-Np-Aj6" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Ood-hv-0cD"/>
+                            <constraint firstItem="sSx-xl-g4l" firstAttribute="top" secondItem="3" secondAttribute="top" constant="122" id="Yi3-EA-H4f"/>
+                            <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="apl-1S-UOC"/>
+                            <constraint firstAttribute="bottom" secondItem="10" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="bcr-if-aDO"/>
+                            <constraint firstItem="z5j-1m-FS1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="cRk-cY-fIh"/>
+                            <constraint firstItem="oJM-Np-Aj6" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="cUO-H1-uYN"/>
+                            <constraint firstItem="Sce-gJ-gXb" firstAttribute="top" secondItem="3" secondAttribute="top" constant="61" id="kNd-uJ-g7q"/>
+                            <constraint firstItem="z5j-1m-FS1" firstAttribute="top" secondItem="sSx-xl-g4l" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wxa-Oi-VLB"/>
+                            <constraint firstItem="oJM-Np-Aj6" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="xXm-Ny-lmI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="FvD-xG-O19" id="Zr4-fS-qwj"/>
+                        <outlet property="navBar" destination="oJM-Np-Aj6" id="Q3x-8h-Fzv"/>
+                        <outlet property="navItem" destination="JsW-zl-vwk" id="r5g-zo-tTm"/>
+                        <outlet property="segControl" destination="Sce-gJ-gXb" id="BlT-e5-EYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="182"/>
+        </scene>
+        <!--Flipside View Controller-->
+        <scene sceneID="9">
+            <objects>
+                <viewController id="6" customClass="FATFlipsideViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                                <items>
+                                    <navigationItem title="Title" id="13">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="14">
+                                            <connections>
+                                                <action selector="done:" destination="6" id="16"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="12" firstAttribute="leading" secondItem="7" secondAttribute="leading" type="default" id="kyL-VC-rMY"/>
+                            <constraint firstItem="12" firstAttribute="top" secondItem="7" secondAttribute="top" type="default" id="oQ7-QK-1Ab"/>
+                            <constraint firstItem="12" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" type="default" id="yf5-Bx-wHg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="182"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FATFlipsideViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FATFlipsideViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="done:"/>
+            </relationships>
+        </class>
+        <class className="FATMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FATMainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="resetButton:"/>
+                <relationship kind="action" name="segControllPress:"/>
+                <relationship kind="action" name="startTimerButton:"/>
+                <relationship kind="action" name="stopTimerButton:"/>
+                <relationship kind="action" name="togglePopover:"/>
+                <relationship kind="outlet" name="counterLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="segControl" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
